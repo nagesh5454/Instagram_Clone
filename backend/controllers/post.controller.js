@@ -94,7 +94,7 @@ export const likePost = async (req, res) => {
         const post = await Post.findById(postId);
         if (!post) return res.status(404).json({ message: 'Post not found', success: false });
 
-        // like logic started
+        // like logic start
         await post.updateOne({ $addToSet: { likes: likeKrneWalaUserKiId } });
         await post.save();
 
