@@ -138,7 +138,7 @@ const CreatePost = ({ open, setOpen }) => {
       setLoading(true);
 
       // API request to create a new post
-      const res = await axios.post('https://instaclone-g9h5.onrender.com/api/v1/post/addpost', formData, {
+      const res = await axios.post('http://localhost:8000/api/v1/post/addpost', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
